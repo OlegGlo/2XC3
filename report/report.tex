@@ -1,0 +1,42 @@
+\documentclass[twocolumn, 10pt]{article}
+
+\usepackage{amsmath}
+
+\title{\LaTeX -nical Report}
+\author{Vincent J. Maccio\\ CAS, McMaster University\\ macciov@mcmaster.ca \and Banjo Maccio\\ Dogtown Hamilton\\ goodboy@mcmaster.ca}
+
+
+\begin{document}
+\maketitle
+\abstract{TODO abstract}
+\section{Introduction}\label{sec:intro}
+Hello world! This is my first \LaTeX\ document. Two ways to write math in Latex, in-line: $x = y^2$, or: $$x = y^2$$
+$$
+k\bigg( \sum_{i=0}^{n}i^2 + \sum_{i=3}^{n + m} i^n \bigg)
+$$
+$$
+k(x + y)
+$$
+$$ x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} $$
+\begin{verbatim}
+def f(n):
+    if n < 2:
+        return n
+    return n * f(n-1)
+\end{verbatim}
+\begin{center}
+\begin{table}[!h]
+\begin{tabular}{|l|l|l|}
+\hline
+x     & y          & z    \\ \hline
+1     & 22         & 3    \\ \hline
+$y+4$ & $k\cdot x$ & text \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+
+\section{First Lesson}
+\section{Second Lesson}
+\section{Conclusion}
+\end{document}
+
