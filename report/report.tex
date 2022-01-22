@@ -53,21 +53,24 @@ Both group member's code is provided below. After consulting we decided to combi
 \begin{verbatim}
 def are_valid_groups(groups, studentNum):
 
-    length = len(studentNum)
+length = len(studentNum)
+count = 0
+countID = 0
+
+for group in groups:
     count = 0
+    countID = 0
+    for students in studentNum:
+        if (group.count(students) == 0):
+            break
+        if (group.count(students) >= 1):
+            count += group.count(students)
+            countID += 1
     
-    for group in groups:
-        count = 0
-        for students in studentNum:
-            if (group.count(students) == 0):
-                break
-            if (group.count(students) == 1):
-                count += 1
-        
-        if count == length:
-            return True
-        
-    return False
+    if (count >= length) and (countID == length):
+        return True
+    
+return False
 \end{verbatim}
 \normalsize
 
@@ -90,6 +93,8 @@ def are_valid_groups(nums, groups):
 \normalsize
 
 \section{Player vs Adversary}
+
+To begin this section we would need to first recode the solution with the new specifications provided in the lab document. 
 
 The code for the string conversion initially would look like this:
 
