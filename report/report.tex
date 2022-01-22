@@ -2,6 +2,7 @@
 
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{float}
 \graphicspath{ {./images/} }
 
 \title{2XC3 - Lab 1 Report}
@@ -13,9 +14,37 @@
 \section{Git Setup}\label{sec:git}
 The group began by setting up out github accounts and the repository. The visibility was set to private to comply with McMaster's code of conduct.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \includegraphics[width=\linewidth]{img1}
 \end{figure}
+
+Both of us has access to the repository. We choose to work with github directly thorough our VSCode IDE since it fully integrates git commands and simplifies the workflow.
+
+\section{Git commands}
+
+Here we fucked around more resulting in the shit you see below
+
+Write up revert and reset
+
+and
+
+The
+
+other 
+
+things
+
+Merge demo
+
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{merge}
+\end{figure}
+
+\section{Code.py}
+
+Both group member's code is provided below. After consulting we decided to combine both of ours solution into the final product in the file code.py not provided here.
+
+Oleg's version:
 
 \footnotesize
 \begin{verbatim}
@@ -41,19 +70,33 @@ print(are_valid_groups(groups, studentNum))
 \end{verbatim}
 \normalsize
 
-\begin{center}
-\begin{table}[!h]
-\begin{tabular}{|l|l|l|}
-\hline
-x     & y          & z    \\ \hline
-1     & 22         & 3    \\ \hline
-$y+4$ & $k\cdot x$ & text \\ \hline
-\end{tabular}
-\end{table}
-\end{center}
+Emma's version:
 
-\section{First Lesson}
-\section{Second Lesson}
-\section{Conclusion}
+\footnotesize
+\begin{verbatim}
+def are_valid_groups(groups, studentNum):
+
+    length = len(studentNum)
+    count = 0
+    
+    for group in groups:
+        count = 0
+        for students in studentNum:
+            if (group.count(students) == 0):
+                break
+            if (group.count(students) == 1):
+                count += 1
+        
+        if count == length:
+            return True
+        
+    return False
+
+print(are_valid_groups(groups, studentNum))
+\end{verbatim}
+\normalsize
+
+\section{Player vs Adversary}
+Let the games begin
 \end{document}
 
