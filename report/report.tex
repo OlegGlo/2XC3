@@ -27,23 +27,17 @@ We experimented with several git commands, including merge, reset and revert, wh
 
 First, we experimented with merge by editing the same line in a text file and then pushing that change to the repository. In VS Code, we were shown the conflict and given the option to choose a version of the file, to merge the two, or reject both changes.
 
-Here we have merge demo
-
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{merge}
 \end{figure}
 
 Then, we used reset to undo some changes made to this report file. Since reset moves the branch that HEAD points to, to a different commit, it's easy to undo uncommitted changes to the file. A downside to reset is that the undone changes are lost.
 
-Here we have reset demo
-
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{reset}
 \end{figure}
 
 Finally, we used revert to undo some changes made to another file. Revert creates a new commit that reverses the changes made by the previous commit. This provides clear documentation of previous versions and allows us to easily return to those before the reverted one.
-
-Here we have revert demo
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{revert}
