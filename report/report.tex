@@ -1,29 +1,46 @@
 \documentclass[twocolumn, 10pt]{article}
 
 \usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
-\title{\LaTeX -nical Report}
-\author{Vincent J. Maccio\\ CAS, McMaster University\\ macciov@mcmaster.ca \and Banjo Maccio\\ Dogtown Hamilton\\ goodboy@mcmaster.ca}
+\title{2XC3 - Lab 1 Report}
+\author{Oleg Glotov\\ L03, 400174037\\ glotovo@mcmaster.ca \and Banjo Maccio\\ Dogtown Hamilton\\ goodboy@mcmaster.ca}
 
 
 \begin{document}
 \maketitle
-\abstract{TODO abstract}
-\section{Introduction}\label{sec:intro}
-Hello world! This is my first \LaTeX\ document. Two ways to write math in Latex, in-line: $x = y^2$, or: $$x = y^2$$
-$$
-k\bigg( \sum_{i=0}^{n}i^2 + \sum_{i=3}^{n + m} i^n \bigg)
-$$
-$$
-k(x + y)
-$$
-$$ x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} $$
+\section{Git Setup}\label{sec:git}
+The group began by setting up out github accounts and the repository. The visibility was set to private to comply with McMaster's code of conduct.
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{img1}
+\end{figure}
+
+\footnotesize
 \begin{verbatim}
-def f(n):
-    if n < 2:
-        return n
-    return n * f(n-1)
+def are_valid_groups(groups, studentNum):
+
+    length = len(studentNum)
+    count = 0
+    
+    for group in groups:
+        count = 0
+        for students in studentNum:
+            if (group.count(students) == 0):
+                break
+            if (group.count(students) == 1):
+                count += 1
+        
+        if count == length:
+            return True
+        
+    return False
+
+print(are_valid_groups(groups, studentNum))
 \end{verbatim}
+\normalsize
+
 \begin{center}
 \begin{table}[!h]
 \begin{tabular}{|l|l|l|}
