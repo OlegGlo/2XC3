@@ -200,8 +200,16 @@ INPUT ./images//merge.png
 INPUT ./images//merge.png
 INPUT ./images//merge.png
 INPUT ./images//merge.png
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
+INPUT ./images//reset.png
+INPUT ./images//reset.png
+INPUT ./images//reset.png
+INPUT ./images//reset.png
+INPUT ./images//revert.png
+INPUT ./images//revert.png
+INPUT ./images//revert.png
+INPUT ./images//revert.png
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT report.aux
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
