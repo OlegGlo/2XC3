@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.12.16)  22 JAN 2022 06:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.12.16)  22 JAN 2022 06:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -101,55 +101,78 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box52
 \@float@everytoks=\toks23
 \@floatcapt=\box53
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count270
+\lst@gtempboxa=\box54
+\lst@token=\toks24
+\lst@length=\count271
+\lst@currlwidth=\dimen150
+\lst@column=\count272
+\lst@pos=\count273
+\lst@lostspace=\dimen151
+\lst@width=\dimen152
+\lst@newlines=\count274
+\lst@lineno=\count275
+\lst@maxwidth=\dimen153
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count276
+\lst@skipnumbers=\count277
+\lst@framebox=\box55
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count270
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count278
+\l__pdf_internal_box=\box56
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
  (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count271
-\scratchdimen=\dimen150
-\scratchbox=\box55
-\nofMPsegments=\count272
-\nofMParguments=\count273
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count274
-\MPscratchDim=\dimen151
-\MPnumerator=\count275
-\makeMPintoPDFobject=\count276
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count279
+\scratchdimen=\dimen154
+\scratchbox=\box57
+\nofMPsegments=\count280
+\nofMParguments=\count281
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count282
+\MPscratchDim=\dimen155
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+\c@lstlisting=\count285
 <./images//img1.png, id=1, 968.61874pt x 553.06625pt>
 File: ./images//img1.png Graphic file (type png)
 <use ./images//img1.png>
-Package pdftex.def Info: ./images//img1.png  used on input line 18.
+Package pdftex.def Info: ./images//img1.png  used on input line 19.
 (pdftex.def)             Requested size: 229.5pt x 131.0339pt.
 <./images//merge.png, id=3, 878.0805pt x 339.06676pt>
 File: ./images//merge.png Graphic file (type png)
 <use ./images//merge.png>
-Package pdftex.def Info: ./images//merge.png  used on input line 30.
+Package pdftex.def Info: ./images//merge.png  used on input line 31.
 (pdftex.def)             Requested size: 229.5pt x 88.61574pt.
 
 Underfull \vbox (badness 6173) has occurred while \output is active []
@@ -157,30 +180,30 @@ Underfull \vbox (badness 6173) has occurred while \output is active []
 <./images//reset.png, id=4, 898.35625pt x 110.4125pt>
 File: ./images//reset.png Graphic file (type png)
 <use ./images//reset.png>
-Package pdftex.def Info: ./images//reset.png  used on input line 36.
+Package pdftex.def Info: ./images//reset.png  used on input line 37.
 (pdftex.def)             Requested size: 229.5pt x 28.20619pt.
 <./images//revert.png, id=5, 619.31375pt x 313.17pt>
 File: ./images//revert.png Graphic file (type png)
 <use ./images//revert.png>
-Package pdftex.def Info: ./images//revert.png  used on input line 42.
+Package pdftex.def Info: ./images//revert.png  used on input line 43.
 (pdftex.def)             Requested size: 229.5pt x 116.05266pt.
  [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./images//img1.png> <./images//merge.png> <./images//reset.png> <./images//revert.png>] [2] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 2092 strings out of 478353
- 32426 string characters out of 5848085
- 342289 words of memory out of 5000000
- 20231 multiletter control sequences out of 15000+600000
- 407912 words of font info for 43 fonts, out of 8000000 for 9000
+ 3459 strings out of 478353
+ 52228 string characters out of 5848085
+ 366293 words of memory out of 5000000
+ 21585 multiletter control sequences out of 15000+600000
+ 408220 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,62p,352b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on report.pdf (2 pages, 283622 bytes).
+ 55i,8n,62p,375b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on report.pdf (2 pages, 297265 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
