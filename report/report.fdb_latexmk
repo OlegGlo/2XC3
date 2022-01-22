@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1642822943 "/Users/olegglotov/Documents/MAC/Python/2XC3/report/report.tex" "report.pdf" "report" 1642822944
-  "/Users/olegglotov/Documents/MAC/Python/2XC3/report/report.tex" 1642822856 4292 1ea59f8614d2cad7ba951513ad114a29 ""
+["pdflatex"] 1642823290 "/Users/olegglotov/Documents/MAC/Python/2XC3/report/report.tex" "report.pdf" "report" 1642823291
+  "/Users/olegglotov/Documents/MAC/Python/2XC3/report/report.tex" 1642823290 4282 2fd954590031fdb6508e0ab216662450 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -53,8 +53,8 @@
   "images//merge.png" 1642822936 28454 1d907f6c6c1f57f7fc9df2cfcde20388 ""
   "images//reset.png" 1642818966 68042 67591ba1556732be607d76a2397c1d66 ""
   "images//revert.png" 1642818719 138565 59a8667d90667612e3ecf7f994a40452 ""
-  "report.aux" 1642822944 638 319c28846a21138004c36cb59e9c8d15 "pdflatex"
-  "report.tex" 1642822856 4292 1ea59f8614d2cad7ba951513ad114a29 ""
+  "report.aux" 1642823291 638 319c28846a21138004c36cb59e9c8d15 "pdflatex"
+  "report.tex" 1642823290 4282 2fd954590031fdb6508e0ab216662450 ""
   (generated)
   "report.aux"
   "report.log"
