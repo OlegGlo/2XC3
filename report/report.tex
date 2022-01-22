@@ -22,8 +22,7 @@ Both of us has access to the repository. We choose to work with github directly 
 
 \section{Git commands}
 
-Here we fucked around more resulting in the shit you see below
-We used revert to create a new commit that reverses the changes made by the previous commit. This preserves previous versions and allows us to return to those before the reverted one.
+We experimented with several git commands, including merge, reset and revert, which are shown below. 
 
 Here we have merge demo
 
@@ -43,17 +42,13 @@ Here we have revert demo
 \includegraphics[width=\linewidth]{revert}
 \end{figure}
 
-Write up revert and reset
+First, we experimented with merge by editing the same line in a text file and then pushing that change to the repository. 
+In VS Code, we were shown the conflict and given the option to choose a version of the file, to merge the two, or reject both changes.\\
+Then, we used reset to undo some changes made to this report file. Since reset moves the branch that HEAD points to, to a different commit, 
+it's easy to undo uncommitted changes to the file. A downside to reset is that the undone changes are lost.\\ 
+Finally, we used revert to undo some changes made to another file. Revert creates a new commit that reverses the changes made by the previous 
+commit. This provides clear documentation of previous versions and allows us to easily return to those before the reverted one.
 
-and
-
-The
-
-other 
-
-things
-
-Merge demo
 
 \section{Code.py}
 
