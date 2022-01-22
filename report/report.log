@@ -198,9 +198,9 @@ Here is how much of TeX's memory you used:
  21585 multiletter control sequences out of 15000+600000
  408220 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,62p,375b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,8n,62p,368b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on report.pdf (2 pages, 295543 bytes).
+Output written on report.pdf (2 pages, 295448 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream
