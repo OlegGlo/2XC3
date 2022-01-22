@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.12.16)  22 JAN 2022 05:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.12.16)  22 JAN 2022 05:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -164,17 +164,7 @@ Package pdftex.def Info: ./images//revert.png  used on input line 43.
  [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./images//img1.png> <./images//merge.png> <./images//reset.png> <./images//revert.png>]
-Underfull \hbox (badness 2042) in paragraph at lines 109--114
-\OT1/cmr/m/n/10 <<<<<<< HEAD Let the games be-gin =======
- []
-
-
-Underfull \hbox (badness 2221) in paragraph at lines 109--114
-\OT1/cmr/m/n/10 Let the games be-gin now re-set demo >>>>>>>
- []
-
-[2
+ <./images//img1.png> <./images//merge.png> <./images//reset.png> <./images//revert.png>] [2
 
 ] (./report.aux) ) 
 Here is how much of TeX's memory you used:
@@ -186,7 +176,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  55i,8n,62p,274b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on report.pdf (2 pages, 283118 bytes).
+Output written on report.pdf (2 pages, 281186 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
