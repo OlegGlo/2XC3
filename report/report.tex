@@ -74,23 +74,17 @@ Emma's version:
 
 \footnotesize
 \begin{verbatim}
-def are_valid_groups(groups, studentNum):
-
-    length = len(studentNum)
-    count = 0
-    
-    for group in groups:
-        count = 0
-        for students in studentNum:
-            if (group.count(students) == 0):
+def are_valid_groups(nums, groups):
+    valid = True
+    for num in nums:
+        valid = False
+        for group in groups:
+            if (num in group): 
+                valid = True
                 break
-            if (group.count(students) == 1):
-                count += 1
-        
-        if count == length:
-            return True
-        
-    return False
+        if (not valid):
+            return False
+    return True
 
 print(are_valid_groups(groups, studentNum))
 \end{verbatim}
