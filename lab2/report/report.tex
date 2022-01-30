@@ -112,7 +112,7 @@ When we graph the data set for $h(n)$, the trend line appears to be linear. From
 \subsection{Copy}
 For all three methods in question, very similar testing methods were selected. Since complexity is measured in the "big O" notation, where N is the number of inputs, the overall trend is seen by testing a relatively small number of inputs. 
 
-I decided to start at an array size of 1 and multiply the subsequent array by 10 each time until the array is 1 million in size. Later I  added additional data points starting at 3 and following similar steps to make my data more complete. 
+I decided to start at an array size of 1 and multiply the subsequent array by 10 each time until the array is 1 million in size. Later, I  added additional data points starting at 3 and following similar steps to make my data more complete. 
 
 \footnotesize
 \begin{verbatim}
@@ -125,7 +125,7 @@ I decided to start at an array size of 1 and multiply the subsequent array by 10
 \end{verbatim}
 \normalsize
   
-The actual array was different for each method tested. In the case of .copy() the array consisted of random integers between 0 and the size of the array being generated:
+The contents of the arrays were different for each method tested. In the case of .copy() the array consisted of random integers between 0 and the size of the array being generated:
 
 \footnotesize
 \begin{verbatim}
@@ -143,9 +143,9 @@ def arrayGenApp(upperLimit):
 \end{verbatim}
 \normalsize
 
-After generating the arrays and measuring the time it took to .copy() each one of them I received data which I plotted on the graph below. The data was plotted with a log scale to properly show the trend.
+After generating the arrays and measuring the time it took to .copy() each one of them, I received data which I plotted on the graph below. The data was plotted with a log scale to properly show the trend.
 
-The initial flat section is consistent with the similar experiments found online and can be disregarded when analyzing the latter data points.
+The initial flat section is consistent with the similar experiments found online and can be disregarded when analyzing the later data points. (reference)
 
 \begin{figure}[H]
 \centering
@@ -154,7 +154,7 @@ The initial flat section is consistent with the similar experiments found online
 \label{Figure: copygraph}
 \end{figure}
 
-Based on official documentation, python's .copy() method runs in O(n) time which is verified by the linear time complexity seen in the graph. This means that if we double an array size, it would take, on average, double the time to make a copy of it. 
+Based on official documentation, python's .copy() method runs in O(n) time which is verified by the linear time complexity (justification) seen in the graph. This means that if we double an array size, it would take, on average, double the time to make a copy of it. 
 
 \footnotesize
 \begin{verbatim}
