@@ -109,6 +109,17 @@ When we graph the data set for $h(n)$, the trend line appears to be linear. From
 
 \section{Python Lists}
 
+To start, I would like to explain how each of the list methods is tested and evaluated. As specified in the .copy() instructions, the "timeit" library must be used. For the purpose of keeping the results consistent, I employed the library throughout the experiments. I used the function timeit.repeat() with parameters generating a total of 100 data points for a single input value. This data is then averaged and exported to a .csv file which is then analyzed in excel to determine the trend line and function complexity. The code to the "timer" is provided below and only changes slightly for each list method being analyzed.
+\scriptsize
+\begin{verbatim}
+def timer(index):
+  if __name__ == '__main__':
+    import timeit
+    print("timing for {} runs".format(index))
+    return timeit.repeat("arrayGenApp({})".format(index), setup="from __main__ import arrayGenApp", repeat=10, number=5)
+\end{verbatim}
+\normalsize
+
 \subsection{Copy}
 For all three methods in question, very similar testing methods were selected. Since complexity is measured in the "big O" notation, where N is the number of inputs, the overall trend is seen by testing a relatively small number of inputs. 
 

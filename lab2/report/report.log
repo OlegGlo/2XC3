@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  30 JAN 2022 20:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  30 JAN 2022 20:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -325,58 +325,63 @@ Package pdftex.def Info: ./images//hn_Tn_n.png  used on input line 103.
  [5pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.114 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+l.114 \begin{verbatim}
+                      pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.114 
-       <./images//hn_logT.png> <./images//hn_Tn_n.png>]
-<./images//copygraph.png, id=90, 830.10126pt x 495.8525pt>
+l.114 \begin{verbatim}
+                       <./images//hn_logT.png> <./images//hn_Tn_n.png>]
+Overfull \hbox (54.76324pt too wide) in paragraph at lines 120--120
+[]    \OT1/cmtt/m/n/8 return timeit.repeat("arrayGenApp({})".format(index), setup="from __main__ import arrayGenApp", repeat=10, number=5)[] 
+ []
+
+[6]
+<./images//copygraph.png, id=96, 830.10126pt x 495.8525pt>
 File: ./images//copygraph.png Graphic file (type png)
 <use ./images//copygraph.png>
-Package pdftex.def Info: ./images//copygraph.png  used on input line 152.
+Package pdftex.def Info: ./images//copygraph.png  used on input line 163.
 (pdftex.def)             Requested size: 273.14896pt x 163.16273pt.
- [6] [7pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.190 
-       <./images//copygraph.png>]
-<./images//lookupgraph.png, id=103, 879.285pt x 526.96875pt>
+l.197 \end{verbatim}
+                     <./images//copygraph.png>]
+<./images//lookupgraph.png, id=104, 879.285pt x 526.96875pt>
 File: ./images//lookupgraph.png Graphic file (type png)
 <use ./images//lookupgraph.png>
-Package pdftex.def Info: ./images//lookupgraph.png  used on input line 207.
+Package pdftex.def Info: ./images//lookupgraph.png  used on input line 218.
 (pdftex.def)             Requested size: 273.13904pt x 163.69633pt.
  [8pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.217 
+l.226 
        <./images//lookupgraph.png>]
-<./images//appendgraph.png, id=110, 887.315pt x 504.88625pt>
+<./images//appendgraph.png, id=111, 887.315pt x 504.88625pt>
 File: ./images//appendgraph.png Graphic file (type png)
 <use ./images//appendgraph.png>
-Package pdftex.def Info: ./images//appendgraph.png  used on input line 251.
+Package pdftex.def Info: ./images//appendgraph.png  used on input line 262.
 (pdftex.def)             Requested size: 273.14223pt x 155.41914pt.
  [9] [10pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.262 \end{document}
+l.273 \end{document}
                      <./images//appendgraph.png>] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 0144558534D0A5C0A890C7CA4C84851D;805.
  ) 
 Here is how much of TeX's memory you used:
- 9702 strings out of 478287
- 152447 string characters out of 5846750
- 446249 words of memory out of 5000000
- 27773 multiletter control sequences out of 15000+600000
- 474457 words of font info for 46 fonts, out of 8000000 for 9000
+ 9704 strings out of 478287
+ 152466 string characters out of 5846750
+ 448249 words of memory out of 5000000
+ 27774 multiletter control sequences out of 15000+600000
+ 474625 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,629b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (10 pages, 768118 bytes).
+ 60i,6n,63p,735b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on report.pdf (10 pages, 776656 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 170 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  30 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
