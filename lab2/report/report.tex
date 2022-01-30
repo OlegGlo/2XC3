@@ -110,10 +110,107 @@ When we graph the data set for $h(n)$, the trend line appears to be linear. From
 \section{Python Lists}
 
 \subsection{Copy}
+For all three methods in question, very similar testing methods were selected. Since complexity is measured in the "big O" notation, where N is the number of inputs, the overall trend is seen by testing a relatively small number of inputs. 
+
+I decided to start at an array size of 1 and multiply the subsequent array by 10 each time until the array is 1 million in size. Later I  added additional data points starting at 3 and following similar steps to make my data more complete. 
+
+\footnotesize
+\begin{verbatim}
+                                  timing for 1 runs
+                                  timing for 3 runs
+                                  timing for 10 runs
+                                  timing for 30 runs
+                                  timing for 100 runs
+                                  ...
+\end{verbatim}
+\normalsize
+  
+The actual array was different for each method tested. In the case of .copy() the array consisted of random integers between 0 and the size of the array being generated:
+
+\footnotesize
+\begin{verbatim}
+import random
+
+def arrayGenApp(upperLimit):
+  j = 0
+  arr = []
+
+  while (j < upperLimit):
+    arr.append(random.randint(0,upperLimit))
+    j += 1
+
+  return arr
+\end{verbatim}
+\normalsize
+
+After generating the arrays and measuring the time it took to .copy() each one of them I received data which I plotted on the graph below. The data was plotted with a log scale to properly show the trend.
+
+The initial flat section is consistent with the similar experiments found online and can be disregarded when analyzing the latter data points.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{copygraph.png}
+\caption{.copy() performance}
+\label{Figure: copygraph}
+\end{figure}
+
+Based on official documentation, python's .copy() method runs in O(n) time which is verified by the linear time complexity seen in the graph. This means that if we double an array size, it would take, on average, double the time to make a copy of it. 
+
+\footnotesize
+\begin{verbatim}
+def copy(array):
+
+  arrCpy = array.copy()
+
+  return arrCpy
+\end{verbatim}
+\normalsize
+
+Since array.copy() iterates over each object in an array, adding references to a new array, it is expected that the runtime would be linear.
 
 \subsection{Lookups}
 
+Lookups used a similar testing method to the one described in .copy(). This time, each array consisted of values from 0 to the upper limit in a natural order. For example, an array of size 10 had the values 0,1,2,...8,9. After consulting with the TA's, this was the method I decided to use as it provided a better estimate of lookups for python lists.
+
+\footnotesize
+\begin{verbatim}
+def arrayGenApp(upperLimit): #values in array increasing
+  j = 0
+  arr = []
+  
+  while (j < upperLimit):
+      arr.append(j)
+      j += 1
+
+  return arr
+\end{verbatim}
+\normalsize
+
+My prediction for the runtime was that the method would not depend on the size of the array, meaning it would run in constant time O(1). For each lookup the algorithm does not need to traverse the array, instead, it would directly access the element with the given index.
+
+\footnotesize
+\begin{verbatim}
+def arrayLook(array):
+  i = 0
+  while (i < len(array)): 
+    array[i]
+    i += 1
+\end{verbatim}
+\normalsize
+
+I had a problem with the original formulation of the question because the given instructions would not properly test the lookup method. The correct approach in my opinion was to measure the time it would take to look up each value in different size arrays which is the approach I implemented. 
+
+Not only would this determine if the lookup method is dependent on array size, but also whether it is affected by the length of the variable being accessed. Since with my testing strategy, a larger array would have larger values stored within it.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{lookupgraph.png}
+\caption{array[i] (lookup) performance}
+\label{Figure: lookupgraph}
+\end{figure}
+
 \subsection{Append}
+
 
 \end{document}
 
