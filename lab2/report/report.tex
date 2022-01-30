@@ -4,6 +4,7 @@
 \usepackage{listings}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{enumitem}
 
 \graphicspath{ {./images/} }
 
@@ -123,7 +124,7 @@ def timer(index):
 \subsection{Copy}
 For all three methods in question, very similar testing methods were selected. Since complexity is measured in the "big O" notation, where N is the number of inputs, the overall trend is seen by testing a relatively small number of inputs. 
 
-I decided to start at an array size of 1 and multiply the subsequent array by 10 each time until the array is 1 million in size. Later, I  added additional data points starting at 3 and following similar steps to make my data more complete. 
+I decided to start at an list size of 1 and multiply the subsequent list by 10 each time until the list is 1 million in size. Later, I  added additional data points starting at 3 and following similar steps to make my data more complete. 
 
 \footnotesize
 \begin{verbatim}
@@ -136,7 +137,7 @@ I decided to start at an array size of 1 and multiply the subsequent array by 10
 \end{verbatim}
 \normalsize
   
-The contents of the arrays were different for each method tested. In the case of .copy() the array consisted of random integers between 0 and the size of the array being generated:
+The contents of the lists were different for each method tested. In the case of .copy() the list consisted of random integers between 0 and the size of the list being generated:
 
 \footnotesize
 \begin{verbatim}
@@ -154,9 +155,9 @@ def arrayGenApp(upperLimit):
 \end{verbatim}
 \normalsize
 
-After generating the arrays and measuring the time it took to .copy() each one of them, I received data which I plotted on the graph below. The data was plotted with a log scale to properly show the trend.
+After generating the lists and measuring the time it took to .copy() each one of them, I received data which I plotted on the graph below. The data was plotted with a log scale to properly show the trend.
 
-The initial flat section is consistent with the similar experiments found online and can be disregarded when analyzing the later data points. (reference)
+The initial flat section is consistent with the similar experiments found online and can be disregarded when analyzing the later data points. 
 
 \begin{figure}[H]
 \centering
@@ -165,7 +166,7 @@ The initial flat section is consistent with the similar experiments found online
 \label{Figure: copygraph}
 \end{figure}
 
-Based on official documentation, python's .copy() method runs in O(n) time which is verified by the linear time complexity (justification) seen in the graph. This means that if we double an array size, it would take, on average, double the time to make a copy of it. 
+Based on official documentation, python's .copy() method runs in O(n) time [1] which is verified by the linear time complexity seen in the graph. This means that if we double an array size, it would take, on average, double the time to make a copy of it. 
 
 \footnotesize
 \begin{verbatim}
@@ -177,11 +178,11 @@ def copy(array):
 \end{verbatim}
 \normalsize
 
-Since array.copy() iterates over each object in an array, adding references to a new array, it is expected that the runtime would be linear.
+Since array.copy() iterates over each object in an list, adding references to a new list, it is expected that the runtime would be linear.
 
 \subsection{Lookups}
 
-Lookups used a similar testing method to the one described in .copy(). This time, each array consisted of values from 0 to the upper limit in a natural order. For example, an array of size 10 had the values 0,1,2,...8,9. After consulting with the TA's, this was the method I decided to use as it provided a better estimate of lookups for python lists.
+Lookups used a similar testing method to the one described in .copy(). This time, each list consisted of values from 0 to the upper limit in a natural order. For example, an list of size 10 had the values 0,1,2,...8,9. After consulting with the TA's, this was the method I decided to use as it provided a better estimate of lookups for python lists.
 
 \footnotesize
 \begin{verbatim}
@@ -197,7 +198,7 @@ def arrayGenApp(upperLimit): #values in array increasing
 \end{verbatim}
 \normalsize
 
-My prediction for the runtime was that the method would not depend on the size of the array, meaning it would run in constant time O(1). For each lookup the algorithm does not need to traverse the array, instead, it would directly access the element with the given index.
+My prediction for the runtime was that the method would not depend on the size of the list, meaning it would run in constant time O(1). For each lookup the algorithm does not need to traverse the list, instead, it would directly access the element with the given index. 
 
 \footnotesize
 \begin{verbatim}
@@ -209,9 +210,10 @@ def arrayLook(array):
 \end{verbatim}
 \normalsize
 
-I had a problem with the original formulation of the question because the given instructions would not properly test the lookup method. The correct approach in my opinion was to measure the time it would take to look up each value in different size arrays which is the approach I implemented. 
+The first time we conducted this experiment, we realized that the method described in the question does not effectively test the lookup method. Using one million-length list does not test the lookup complexity for lists of varying sizes, only varying indices. Therefore we redesigned the experiment to 
+measure the time it would take to look up each value in different size lists. 
 
-Not only would this determine if the lookup method is dependent on array size, but also whether it is affected by the length of the variable being accessed. Since with my testing strategy, a larger array would have larger values stored within it.
+Not only would this determine if the lookup method is dependent on list size, but also whether it is affected by the length of the variable being accessed. Since with my testing strategy, a larger list would have larger values stored within it.
 
 \begin{figure}[H]
 \centering
@@ -220,11 +222,13 @@ Not only would this determine if the lookup method is dependent on array size, b
 \label{Figure: lookupgraph}
 \end{figure}
 
+As we can see from the above chart, the time taken to perform $n$ lookups increases linearly with respect to $n$. For each added lookup call, the time increases by a constant value. Therefore, our data suggests that lookup runs in $O(1)$. From the chart we can also see that the size of the element being accessed does not affect the performance of lookup. If the size of the element being accessed affected performance, we would see a quadratic relation instead of a linear one. This is because python lists are actually implemented as an array of pointers, which are all the same size [2].
+
 \subsection{Append}
 
-Similar to the lookup method, the procedure described in the lab document would not produce an accurate result. By measuring the time it will take to append single values, we will inevitably have inaccurate data due to the nature of lists in general. 
+Similar to the lookup method, the procedure described in the lab document does not adequately control all possible variables and therefore would not produce an accurate result. By measuring the time it takes to append individual values, we will inevitably encounter flaws in the data due to the nature of lists in general. 
 
-Since python lists are dynamic, meaning that they grow in size as more elements are added to them, some append operations would take significantly more time than others. For example, If we started with a dynamic array of size 4, we could append 4 elements to it, and each operation would take constant time. Yet appending a fifth element onto that array would take longer as the array would have to create a new array of double the current size (8), copy the old elements onto the new array, and then add the new element. 
+Since python lists are dynamic, meaning that their lengths are changeable, some append operations would take significantly more time than others. For example, if we started with a dynamic list of size 4, we could append 4 elements to it, and each operation would take constant time. Yet appending a fifth element onto that list would take longer as the list would have to create a new list of double the current size (8), copy the old elements onto the new list, and then add the new element. 
 
 \footnotesize
 \begin{verbatim}
@@ -240,7 +244,7 @@ def arrayGenApp(upperLimit): #values in array increasing
 \end{verbatim}
 \normalsize
 
-Based on this evidence and a consultation with a TA I used the method I described when working on Lookups here. This method involves measuring the time it would take to create arrays of different sizes using the .append() method and then plotting the data. The generated arrays would progressively get bigger following the pattern seen in the .copy() method to ensure an accurate evaluation.
+Based on this evidence and a consultation with a TA I used the method I described when working on Lookups here. This method involves measuring the time it would take to create lists of different sizes using the .append() method and then plotting the data. The generated lists would progressively get bigger following the pattern seen in the .copy() method to ensure an accurate evaluation.
 
 \footnotesize
 \begin{verbatim}
@@ -264,11 +268,17 @@ The method employed here allows us to take care of the amortized analysis effici
 \label{Figure: appendgraph}
 \end{figure}
 
-Based on the data seen in the graph above we can conclude that the complexity is linear which is consistent with the previously studied algorithms and the data available online.
+Based on the data seen in the graph above we can conclude that the complexity is linear which is consistent with our hypothesis and official documentation [1].
 
 \section{Conclusion}
 
-For each method being tested the analyzed data is consistent with the provided reference, as well as other studies found online. The complexity of O(n) for .append() and .copy() methods are demonstrated by the linear model graphed in the figures 8 and 10. The general case for the lookup method is similarly explained in figure 9 and its complexity is determined.
+For each method being tested, the analyzed data is consistent with the provided reference, as well as additional online sources. The complexity of O(n) for .append() and .copy() methods are demonstrated by the linear models graphed in the figures 8 and 10. The general case for the lookup method is similarly explained in figure 9 and its complexity is determined.
+
+\newpage\section*{References}
+\begin{enumerate}[label={[\arabic*]}]
+\item	TimeComplexity. (2020, August 18). Python Wiki. Retrieved from https://wiki.python.org/moin/TimeComplexity
+\item	Design and History FAQ — Python 3.10.2 documentation. (n.d.). Python Docs. Retrieved from https://docs.python.org/3/faq/design.html
+\end{enumerate}
 
 \end{document}
 
