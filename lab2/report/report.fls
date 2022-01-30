@@ -519,6 +519,11 @@ INPUT ./images//lookupgraph.png
 INPUT ./images//lookupgraph.png
 INPUT ./images//lookupgraph.png
 INPUT ./images//lookupgraph.png
+INPUT ./images//appendgraph.png
+INPUT ./images//appendgraph.png
+INPUT ./images//appendgraph.png
+INPUT ./images//appendgraph.png
+INPUT ./images//appendgraph.png
 INPUT report.aux
 INPUT ./report.out
 INPUT ./report.out

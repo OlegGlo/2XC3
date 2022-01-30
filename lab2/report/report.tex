@@ -211,6 +211,53 @@ Not only would this determine if the lookup method is dependent on array size, b
 
 \subsection{Append}
 
+Similar to the lookup method, the procedure described in the lab document would not produce an accurate result. By measuring the time it will take to append single values, we will inevitably have inaccurate data due to the nature of lists in general. 
+
+Since python lists are dynamic, meaning that they grow in size as more elements are added to them, some append operations would take significantly more time than others. For example, If we started with a dynamic array of size 4, we could append 4 elements to it, and each operation would take constant time. Yet appending a fifth element onto that array would take longer as the array would have to create a new array of double the current size (8), copy the old elements onto the new array, and then add the new element. 
+
+\footnotesize
+\begin{verbatim}
+def arrayGenApp(upperLimit): #values in array increasing
+  j = 0
+  arr = []
+  
+  while (j < upperLimit):
+      arr.append(1)
+      j += 1
+
+  return arr
+\end{verbatim}
+\normalsize
+
+Based on this evidence and a consultation with a TA I used the method I described when working on Lookups here. This method involves measuring the time it would take to create arrays of different sizes using the .append() method and then plotting the data. The generated arrays would progressively get bigger following the pattern seen in the .copy() method to ensure an accurate evaluation.
+
+\footnotesize
+\begin{verbatim}
+i = 1
+j = 3
+  while (i < 1000001):
+    logtocsv(i, average(timer(i)))
+    logtocsv(j, average(timer(j)))
+    
+    i *= 10
+    j *= 10
+\end{verbatim}
+\normalsize
+
+The method employed here allows us to take care of the amortized analysis efficiently and elegantly, arriving at the correct conclusion. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{appendgraph.png}
+\caption{.append() performance}
+\label{Figure: appendgraph}
+\end{figure}
+
+Based on the data seen in the graph above we can conclude that the complexity is linear which is consistent with the previously studied algorithms and the data available online.
+
+\section{Conclusion}
+
+For each method being tested the analyzed data is consistent with the provided reference, as well as other studies found online. The complexity of O(n) for .append() and .copy() methods are demonstrated by the linear model graphed in the figures 8 and 10. The general case for the lookup method is similarly explained in figure 9 and its complexity is determined.
 
 \end{document}
 

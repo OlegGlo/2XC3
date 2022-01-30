@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1643560748 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab2/report/report.tex" "report.pdf" "report" 1643560751
-  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab2/report/report.tex" 1643560748 8368 2eae86dea5dba8e167db1136c2aaa4d7 ""
+["pdflatex"] 1643564666 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab2/report/report.tex" "report.pdf" "report" 1643564668
+  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab2/report/report.tex" 1643564663 10839 f0f646a5167f3843c7155143379b9c01 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -73,6 +73,7 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1643463911 4379201 880d78f4a2bde4f491e7d718ab91f390 ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1643282626 2796781 a49c2ec4cbdfafb4956b453f3be0c46a ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
+  "images//appendgraph.png" 1643564126 108833 a8f4dea50a547ccf4c8191d5655b61c5 ""
   "images//copygraph.png" 1643557705 112922 380a7140b08b6d6e20430ea8fce0a1e2 ""
   "images//fn_Tn.png" 1643387742 124552 7b46edfc28ca3a786f9fe0c53ba1c306 ""
   "images//gn_Tn.png" 1643387742 81880 82dcdec07bdf3669760ca5f6527e5992 ""
@@ -82,9 +83,9 @@
   "images//hn_Tn_n.png" 1643387742 94372 2452d8267d1c34b7b0b58f4d2916f413 ""
   "images//hn_logT.png" 1643387742 79753 0a8a834ff42846c58185735e60eac4b1 ""
   "images//lookupgraph.png" 1643560399 112010 b65e014597bf678260598e6568e41f4d ""
-  "report.aux" 1643560751 3501 58622b9794703624d7ec91900d98ee1f "pdflatex"
-  "report.out" 1643560751 712 b2008a12f10fb0e68b420c2f2ee37534 "pdflatex"
-  "report.tex" 1643560748 8368 2eae86dea5dba8e167db1136c2aaa4d7 ""
+  "report.aux" 1643564668 3822 be67f31579b67c9583de58ebce05233e "pdflatex"
+  "report.out" 1643564668 805 0144558534d0a5c0a890c7ca4c84851d "pdflatex"
+  "report.tex" 1643564663 10839 f0f646a5167f3843c7155143379b9c01 ""
   (generated)
   "report.aux"
   "report.log"
