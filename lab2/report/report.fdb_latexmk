@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1643565410 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab2/report/report.tex" "report.pdf" "report" 1643565412
-  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab2/report/report.tex" 1643565409 11756 cd8c83bfd5112d9e88533ed95d511626 ""
+["pdflatex"] 1643600791 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab2/report/report.tex" "report.pdf" "report" 1643600794
+  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab2/report/report.tex" 1643600791 12833 58633633e8e85f03719f92e5dd8b7790 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -46,6 +46,7 @@
   "/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty" 1636758526 3034 3bfb87122e6fa8758225c0dd3cbaceba ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1636758526 2462 754d6b31b2ab5a09bb72c348ace2ec75 ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/base/size12.clo" 1636758526 8449 bc7344e882df4d7e51c046514dee83e4 ""
+  "/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty" 1561238569 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
@@ -85,9 +86,9 @@
   "images//hn_Tn_n.png" 1643387742 94372 2452d8267d1c34b7b0b58f4d2916f413 ""
   "images//hn_logT.png" 1643387742 79753 0a8a834ff42846c58185735e60eac4b1 ""
   "images//lookupgraph.png" 1643560399 112010 b65e014597bf678260598e6568e41f4d ""
-  "report.aux" 1643565412 3822 193b350bcfb1754984b2a6ac5ef21f8a "pdflatex"
-  "report.out" 1643565412 805 0144558534d0a5c0a890c7ca4c84851d "pdflatex"
-  "report.tex" 1643565409 11756 cd8c83bfd5112d9e88533ed95d511626 ""
+  "report.aux" 1643600794 3822 9a8e90783efb316fd8026aa9cd52f4f1 "pdflatex"
+  "report.out" 1643600794 805 0144558534d0a5c0a890c7ca4c84851d "pdflatex"
+  "report.tex" 1643600791 12833 58633633e8e85f03719f92e5dd8b7790 ""
   (generated)
   "report.aux"
   "report.log"
