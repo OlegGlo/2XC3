@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1643898261 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab3/report/report.tex" "report.pdf" "report" 1643898262
-  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab3/report/report.tex" 1643898260 10919 e7d6914b838efa6fc1e1a7e246c81a37 ""
+["pdflatex"] 1643912475 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab3/report/report.tex" "report.pdf" "report" 1643912475
+  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab3/report/report.tex" 1643912473 12833 58633633e8e85f03719f92e5dd8b7790 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -76,9 +76,19 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1643463911 4379201 880d78f4a2bde4f491e7d718ab91f390 ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1643282626 2796781 a49c2ec4cbdfafb4956b453f3be0c46a ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "report.aux" 1643898262 1693 0b85bc1d8162de074c1cc0beb9d4269b "pdflatex"
-  "report.out" 1643898262 805 0144558534d0a5c0a890c7ca4c84851d "pdflatex"
-  "report.tex" 1643898260 10919 e7d6914b838efa6fc1e1a7e246c81a37 ""
+  "appendgraph.png" 0 -1 0 ""
+  "copygraph.png" 0 -1 0 ""
+  "fn_Tn" 0 -1 0 ""
+  "gn_Tn" 0 -1 0 ""
+  "gn_Tn2" 0 -1 0 ""
+  "gn_logT" 0 -1 0 ""
+  "hn_Tn" 0 -1 0 ""
+  "hn_Tn_n" 0 -1 0 ""
+  "hn_logT" 0 -1 0 ""
+  "lookupgraph.png" 0 -1 0 ""
+  "report.aux" 1643912475 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "report.out" 0 -1 0 "pdflatex"
+  "report.tex" 1643912473 12833 58633633e8e85f03719f92e5dd8b7790 ""
   (generated)
   "report.aux"
   "report.log"
