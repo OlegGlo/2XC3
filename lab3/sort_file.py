@@ -28,7 +28,6 @@ def quicksort_inplace(L, left=0, right=None):
     else: 
         return
     
-
 def partition(L, left, right):
     pivot = L[left]
     n = right+1
@@ -38,7 +37,6 @@ def partition(L, left, right):
             L[n], L[i] = L[i], L[n]
     L[n-1], L[left] = L[left], L[n-1]
     return n-1
-
 
 def dual_pivot_quicksort(L):
     copy = quicksort_2pivot(L)
