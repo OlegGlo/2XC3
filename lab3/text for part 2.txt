@@ -1,0 +1,5 @@
+The test used to measure performance was similar to the test used for lab 2. The “timeit” library was used to measure the runtime which was then exported into a csv file and subsequently analyzed in excel. The sample size for each sorting implementation were multiples of 10, increasing to a list size of a 100000. For each sample size, an implementation was tested 5 times and the results averaged. For each trial, a new random array was generated to ensure the general average case performance was measured.
+
+[Graph]
+
+The data clearly showed a 20 to 25% improvement in runtime between a 1 and 2 pivot quicksort. Further increases in the number of pivots only improved the runtime by 1 to 2% which is insignificant. For further experiments I would recommend following the example of Java developers and using the 2-pivot quicksort as the default quicksort, similar to how it is used as the default sorting algorithm in Java 7. [Something about its implementation not being as messy as the final 2].
