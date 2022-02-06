@@ -138,3 +138,31 @@ def quicksort_4pivot(L):
         
     final = quicksort_4pivot(left) + [pivotL] + quicksort_4pivot(midL) + [pivotML] + quicksort_4pivot(midM) + [pivotMR] + quicksort_4pivot(midR) + [pivotR] + quicksort_4pivot(right)
     return final
+
+def final_sort(L):
+    if len(L) < 2:
+        return L
+    if len(L) < 10:
+        insertion_sort(L)
+        return L
+    pivot = L[0]
+    left, right = [], []
+    for num in L[1:]:
+        if num < pivot:
+            left.append(num)
+        else:
+            right.append(num)
+    return final_sort(left) + [pivot] + final_sort(right)
+
+def insertion_sort(L):
+    for i in range(1, len(L)):
+        insert_into(L, i)
+
+def insert_into(L, n):
+    i = n
+    while i > 0:
+        if L[i] < L[i-1]:
+            L[i], L[i-1] = L[i-1], L[i]
+        else:
+            return
+        i -= 1

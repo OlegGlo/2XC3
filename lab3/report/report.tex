@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{enumitem}
+
+\graphicspath{ {./images/} }
+
+\oddsidemargin 0mm
+\evensidemargin 0mm
+\textwidth 160mm
+\textheight 200mm
+
+\pagestyle {plain}
+\pagenumbering{arabic}
+
+\newcounter{stepnum}
+
+\title{CS/SE 2XC3 Lab 3 Report}
+\author{
+  Glotov, Oleg\\ L03, 400174037\\
+  \texttt{glotovo@mcmaster.ca}
+  \and
+  Willson, Emma\\ L02, 400309856\\
+  \texttt{willsone@mcmaster.ca}
+  }
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+This report includes the main observations that we found in this week's lab, along with the analysis of our results.
+
+\newpage 
+\section{Quicksort}
+In this section, we discuss the complexities of various implementations of quicksort, conduct experiments to investigate their performance, and analyze the results of those experiments.
+\subsection{Experimental Method}
+The method used to measure the performance of each sorting function was similar to the method used for lab 2. The “timeit” library was used to measure the runtime which was then exported into a csv file and subsequently analyzed in excel. The sample size for each sorting implementation were multiples of 10, increasing to a list size of a 1 000 000. For each sample size, an implementation was tested 5 times and the results averaged. For each trial, a new random list was generated. Because the numbers in each list are randomly distributed, we assume that, on average, quicksort will partition these lists into equal parts. Thereby our method ensures that the general average case performance was measured.
+
+\subsection{In-Place}
+My in-place implementation of quicksort has the advantage of not needing to allocate new memory.  In contrast, the given implementation reconstructs the unsorted list using temporary left and right lists. It effectively duplicates the list, requiring twice as much variable space as my implementation. 
+
+Using the experimental method described in section 1.1, I generated timing data for  \verb+my_quicksort()+ and \verb+quicksort_inplace()+ with list lengths ranging from 10 to 1 000 000. I used \verb+create_random_list()+ to generate each trial list. These results are shown in the graph below. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{in_place}
+\caption{performance of traditional compared to in-place implementation}
+\label{Figure: i1}
+\end{figure}
+\noindent The two implementations are very close in performance, but in-place is slightly slower than traditional. Their performances seem to be diverging around the input size of 10 000. After this point, there is a clear separation between the two performances. On average, there is a 15.06\% increase in time complexity from the traditional implementation to in-place.
+In practice, I would most likely use the traditional implementation because it is faster. An occasion when I might want to use the in-place implementation is if I was sorting a list that takes up a lot of space and did not want to take up twice as much space to do so. That list might have a very big number of elements, or very big individual elements. 
+
+\subsection{Multi-Pivot Quicksort}
+I used the same experimental method from 1.1 to test my implementations of multi-pivot quicksort. I generated timing data for \verb+my_quicksort()+, \verb+dual_pivot_quicksort()+, \verb+tri_pivot_quicksort()+, and \verb+quad_pivot_quicksort()+. I analyzed and graphed the data, which is shown below.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{multi_pivot}
+\caption{performance of all five implementations}
+\label{Figure: m1}
+\end{figure}
+
+The data clearly shows a 20 to 25\% improvement in runtime between a 1 and 2 pivot quicksort. Further increases in the number of pivots only improved the runtime by 1 to 2\% which is insignificant. For further experiments I would recommend following the example of Java developers and using the 2-pivot quicksort as the default quicksort, similar to how it is used as the default sorting algorithm in Java 7. For the rest of this lab, we use 2-pivot quicksort as our default quicksort.
+
+\subsection{Worst Case}
+The worst case performance for quicksort occurs when the chosen pivot is always either the smallest or the largest element. In the case of a dual-pivot quicksort, the worst case occurs when both pivots are either the two largest elements, the two smallest, or the largest and smallest elements. Our quicksort picks the first and last elements of the list as the pivots, so an already-sorted list would be the worst-case input. 
+
+\footnotesize
+\begin{verbatim}
+def dual_pivot_quicksort(L):
+    copy = quicksort_2pivot(L)
+    for i in range(len(L)):
+        L[i] = copy[i]
+
+def quicksort_2pivot(L):
+    if len(L) < 2:
+        return L
+    pivotL = L[0]
+    pivotR = L[-1]
+    if (pivotL >= pivotR):
+        temp = pivotL
+        pivotL = pivotR
+        pivotR = temp
+    left, right, mid = [], [], []
+    for num in L[1:-1]:
+        if num < pivotL:
+            left.append(num)
+        elif pivotL <= num and num <= pivotR:
+            mid.append(num)
+        else:
+            right.append(num)
+    final = quicksort_2pivot(left) + [pivotL] + quicksort_2pivot(mid) + [pivotR] + quicksort_2pivot(right)
+    return final
+\end{verbatim}
+\normalsize
+
+To test the worst case performance, I generated a random list and a reverse-sorted list for each trial and then recorded the time taken to sort it using my dual-pivot quicksort. To generate these lists, I used \verb+create_random_list()+ and then the built-in \verb+sort()+ and \verb+reverse()+ Python functions. When collecting performance data for this experiment, I tried to follow the same steps as in the previous experiments. However, for data points after input size 1000, I recieved a maximum recursion depth error. The maximum recursion depth for the version of Python that I am running is 1000 [1]. This means that, at input size 10 000, our worst case quicksort run should have reached over 1000 recursive calls. Due to the way that the function selects pivots, a sorted list would only be separated into one middle list and 2 outer pivots with each recursive call. Then, the number of recursive calls would be $\frac{n}{2}$, where $n$ is the input size. 
+Consequently, I only collected data up to input size 1000 for the worst case test. The results of this experiment are shown in the graph below. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{worst_case}
+\caption{average and worst-case performance of dual-pivot quicksort}
+\label{Figure: w1}
+\end{figure}
+
+\noindent There is not a lot of data for the worst case input, but it is clear from the graph and the maximum recursion depth error that the complexity is increasing at a much greater rate than the average case with respect to \verb+n+. With each recursive call, each non-pivot element in \verb+L+ is compared to \verb+pivotL+ and \verb+pivotR+. Since this is the worst case and each non-pivot element is going to be between the two pivots, only the \verb+mid+ list is passed in the recursive call, with a length of $n-2$. The number of compares $= 2*((n-2) + (n-4) + (n-6) + ... + 4 + 2) = n*(n-2)$, which is in $O(n^2)$. This is worse than the average case, which runs in $O(n\log{n})$ [2].
+
+The \verb+create_near_sorted_list()+ function takes an integer \verb+i+ and a float \verb+factor+ and generates a list of random numbers of size \verb+i+. It sorts the list and then performs \verb+i*factor+ swaps on randomly selected elements in the list, finally returning the partially sorted list. The smaller the \verb+factor+, the fewer swaps are performed. When the list is close to sorted, I would expect the bubble and insertion sorts to perform better than our quicksort implementation. This is because the implementation of bubble sort that we use has a swap counter that checks if any swaps need to be performed. If the input list is already sorted, the function can detect this after the first loop. This allows the loops to terminate before visiting every element, which is better for near-sorted lists. This implementation of bubble sort is shown below.
+
+\footnotesize
+\begin{verbatim}
+def bubble_sort_opt3(L):
+    for i in range(len(L)):
+        swaps = 0
+        for j in range(len(L) - 1 - i):
+            if L[j] > L[j+1]:
+                swap(L, j, j+1)
+                swaps += 1
+        if swaps == 0:
+            return
+\end{verbatim}
+\normalsize
+
+\noindent Insertion sort is similar to this implementation of bubble sort in that it can quickly check if the input list is already in order. Insertion sort simply iterates through the list and, if an element is out of place, it backtracks in order to find the proper place for it. I expect bubble and insertion sort to perform better than quicksort for near-sorted lists because they are optimal for these kinds of inputs.
+
+For my experiment, I chose to test my dual-pivot quicksort, optimized bubble sort, insertion sort, and selection sort on lists of length 1000. These lists we randomly generated, much like the method describe in section 1.1, except in this experiment they were generated using the \verb+create_near_sorted_list()+ function, with \verb+factor+ values ranging from 0.0001 to 1000. I chose to focus the \verb+factor+ values around this range because when \verb+factor+ = 0.001, only one swap is performed. When \verb+factor+ = 1, 1000 swaps are performed, so the list should be completely randomized again. I generated five trials per data point and took the average of them, as usual. This data is shown in the graph below.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{sorted_factor}
+\caption{performance of various sorts on partially sorted lists}
+\label{Figure: w2}
+\end{figure}
+
+\noindent As we can see in the graph, bubble and insertion sort perform better than quicksort for sorted-factor values of 0.001 and smaller. This means that between 10 and 100 swaps, bubble sort's time complexity dramatically increases in comparison to quicksort. Insertion sort performs better than quicksort for all the values that were tested. These elemantary sorts' performance is probably due to their abilities to detect an already sorted list, as well as the fact that these implementations are non-recursive. Meanwhile, our quicksort does not check if the input list is already sorted, yielding worst-case behaviour. Also quicksort is recursive, resulting in additional overhead.
+
+
+
+\subsection{Small Lists}
+
+should be single pivot, uses insertion sort for list size $<$ 10, tail recursion?
+want to manage worst case complexity by checking if already sorted
+shouldn't be too dense as we are working with small lists
+
+\section{Conclusion}
+
+explored factors such as list size, sortedness, etc.
+learned that quicksort (especially dual pivot) is good for larger lists..
+
+\newpage\section*{References}
+\begin{enumerate}[label={[\arabic*]}]
+\item	sys — System-specific parameters and functions — Python 3.10.2 documentation. (n.d.). Python Docs. Retrieved from https://docs.python.org/3/library/sys.html\#sys.getrecursionlimit
+\item	Leiserson, C. E., Rivest, R. L., Cormen, T. H., \& Stein, C. (2009). Introduction to Algorithms. MIT Press.
+
+\end{enumerate}
+
+\end{document}
+
