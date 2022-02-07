@@ -139,11 +139,9 @@ For my experiment, I chose to test my dual-pivot quicksort, optimized bubble sor
 
 \noindent As we can see in the graph, bubble and insertion sort perform better than quicksort for sorted-factor values of 0.001 and smaller. This means that between 10 and 100 swaps, bubble sort's time complexity dramatically increases in comparison to quicksort. Insertion sort performs better than quicksort for all the values that were tested. These elemantary sorts' performance is probably due to their abilities to detect an already sorted list, as well as the fact that these implementations are non-recursive. Meanwhile, our quicksort does not check if the input list is already sorted, yielding worst-case behaviour. Also quicksort is recursive, resulting in additional overhead.
 
-
-
 \subsection{Small Lists}
 
-As an improvement for quicksort, we decided to combine the average case efficiency of quicksort with the speed insertion sort handles nearly sotted arrays. Our \verb+final_sort()+ algorithm implements insertion sort on partitions with less than 10 elements. To further increase performance we employed a median-of-3 approach to pivot selection. The common pathologies $O(N^2)$ of sorted/reverse sorted inputs are mitigated with this improvement. 
+As an improvement for quicksort, we decided to combine the average case efficiency of quicksort with the speed insertion sort handles nearly sorted arrays. We noticed that insertion sort is much quicker than quicksort for very small array sizes. Our \verb+final_sort()+ algorithm implements insertion sort on partitions with less than 10 elements. To further increase performance we employed a median-of-3 approach to pivot selection. The common pathologies $O(n^2)$ of sorted/reverse sorted inputs are mitigated with this improvement. 
 
 When using a median-of-3 approach it is important to also sort the three elements when picking the median. This approach would ensure fair pivot selection in all recursive calls and lead to a more evenly partitioned array.
 
@@ -175,9 +173,7 @@ def median(a,b,c):
 
 
 \section{Conclusion}
-
-explored factors such as list size, sortedness, etc.
-learned that quicksort (especially dual pivot) is good for larger lists..
+ In this lab, we explored different implementations of quicksort. We designed and tested the performances of in-place and multi-pivot quicksorts. Our analysis shows that in-place sorting saves memory usage, but it does not improve time complexity. We also found that adding pivots to the quicksort algorithm improves time complexity, but as more pivots are added, that improvement becomes less significant. We determined that dual-pivot quicksort is the optimal general-purpose quicksort algorithm because it is 20\% faster than single-pivot while not having as much overhead as the tri and quad-pivot quicksorts. We also designed experiments to test the behaviour of our quicksort with worst-case input. We found that an already sorted input yields $O(n^2)$ time complexity, while the average case is in $O(n\log{n})$. We tested the performance of bubble, insertion, selection and quicksort on lists with varying degrees of sortedness and found that bubble and insertion perform better because they are able to terminate early once they detect that the list is sorted. We used the findings from our experiments to design an optimized quicksort for small lists. Our final sort mitigates the weakness of quicksort for small list sizes by supplementing it with insertion sort. It chooses the pivot by taking the median of three elements across the array. This prevents the worst-case performance of quicksort and allows the algorithm to partition the list into more even halves.
 
 \newpage\section*{References}
 \begin{enumerate}[label={[\arabic*]}]
