@@ -143,9 +143,36 @@ For my experiment, I chose to test my dual-pivot quicksort, optimized bubble sor
 
 \subsection{Small Lists}
 
-should be single pivot, uses insertion sort for list size $<$ 10, tail recursion?
-want to manage worst case complexity by checking if already sorted
-shouldn't be too dense as we are working with small lists
+As an improvement for quicksort, we decided to combine the average case efficiency of quicksort with the speed insertion sort handles nearly sotted arrays. Our \verb+final_sort()+ algorithm implements insertion sort on partitions with less than 10 elements. To further increase performance we employed a median-of-3 approach to pivot selection. The common pathologies $O(N^2)$ of sorted/reverse sorted inputs are mitigated with this improvement. 
+
+When using a median-of-3 approach it is important to also sort the three elements when picking the median. This approach would ensure fair pivot selection in all recursive calls and lead to a more evenly partitioned array.
+
+\footnotesize
+\begin{verbatim}
+pivot = median(array[0],array[-1],array[int(len(array)/2)])
+
+[...]
+
+def biggest(a,b,c):
+    return bigger(a,bigger(b,c))
+
+def bigger(a,b):
+    if a > b:
+        return a
+    else:
+        return b
+
+def median(a,b,c):
+    x = biggest(a,b,c)
+    if x == a:
+        return bigger(b,c)
+    if x == b:
+        return bigger(a,c)
+    else:
+        return bigger(a,b)
+\end{verbatim}
+\normalsize
+
 
 \section{Conclusion}
 
