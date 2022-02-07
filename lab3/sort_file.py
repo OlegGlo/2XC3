@@ -140,19 +140,26 @@ def quicksort_4pivot(L):
     return final
 
 def final_sort(L):
+
+    copy = final_sorting(L)
+    for i in range(len(L)):
+        L[i] = copy[i]
+
+def final_sorting(L):
     if len(L) < 2:
         return L
     if len(L) < 10:
         insertion_sort(L)
         return L
-    pivot = L[0]
+    else:
+        pivot = median(L[0],L[-1],L[int(len(L)/2)])
     left, right = [], []
     for num in L[1:]:
         if num < pivot:
             left.append(num)
         else:
             right.append(num)
-    return final_sort(left) + [pivot] + final_sort(right)
+    return final_sorting(left) + [pivot] + final_sorting(right)
 
 def insertion_sort(L):
     for i in range(1, len(L)):
@@ -166,3 +173,21 @@ def insert_into(L, n):
         else:
             return
         i -= 1
+
+def biggest(a,b,c):
+    return bigger(a,bigger(b,c))
+
+def bigger(a,b):
+    if a > b:
+        return a
+    else:
+        return b
+
+def median(a,b,c):
+    x = biggest(a,b,c)
+    if x == a:
+        return bigger(b,c)
+    if x == b:
+        return bigger(a,c)
+    else:
+        return bigger(a,b)
