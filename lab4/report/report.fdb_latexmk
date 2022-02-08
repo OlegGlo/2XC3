@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1644356160 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab4/report/report.tex" "report.pdf" "report" 1644356162
-  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab4/report/report.tex" 1644356159 13738 4d1f34cff6c84ffd63585921aec5841d ""
+["pdflatex"] 1644358279 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab4/report/report.tex" "report.pdf" "report" 1644358281
+  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab4/report/report.tex" 1644358279 13738 4d1f34cff6c84ffd63585921aec5841d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -79,9 +79,9 @@
   "images//multi_pivot.png" 1644356149 158085 f49d72e6bcb15a1287a6c4edc7e9dfbf ""
   "images//sorted_factor.png" 1644356149 119184 73703083d747491d2a4b46ac5a370a04 ""
   "images//worst_case.png" 1644356149 92114 5af8a7bc94fe806ed7489fcb0841db90 ""
-  "report.aux" 1644356162 2550 92b86b26bd5cc9ce2d88e234f999a1ec "pdflatex"
-  "report.out" 1644356162 823 01ec506479ab84aad263f2b0895c3399 "pdflatex"
-  "report.tex" 1644356159 13738 4d1f34cff6c84ffd63585921aec5841d ""
+  "report.aux" 1644358281 2550 92b86b26bd5cc9ce2d88e234f999a1ec "pdflatex"
+  "report.out" 1644358281 823 01ec506479ab84aad263f2b0895c3399 "pdflatex"
+  "report.tex" 1644358279 13738 4d1f34cff6c84ffd63585921aec5841d ""
   (generated)
   "report.aux"
   "report.log"
