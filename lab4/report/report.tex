@@ -41,16 +41,9 @@ In this section, we discuss the complexities of various implementations of merge
 The method used to measure the performance of each sorting function was the same as the method used for lab 3. The “timeit” library was used to measure the runtime which was then exported into a csv file and subsequently analyzed in excel. The sample size for each sorting implementation were multiples of 10, increasing to a list size of a 1 000 000. For each sample size, an implementation was tested 5 times and the results averaged. For each trial, a new random list was generated. 
 
 \subsection{Bottom-up}
-Implement a function mergesort\_bottom(L) which takes a single list as input and sorts
-that list L. Implement a helper function merge_bottom(L, start, mid, end). This should merge
-the interval [start:end] assuming [start:mid] and [mid:end] are sorted. The ex-
-act inclusive/exclusive decisions for the intervals are left up to you. As long as your
-mergesort\_bottom(L) works. Your functions should not be recursive in anyway. Loops only. Note, in Figure 2 the length of the list is conveniently a power of 2, this may not be the
-case. You will have to resolve this in some way. Compare this bottom-up implementation to the one I gave you in lab4.py
-
 In our implementation of bottom-up mergesort, we treat the input list as if it were already divided into 1 element lists and iteratively merge pairs of lists until the sorting window is the same size as the input. Since this approach assumes that the size of the input is a power of 2, we maintain a sublist of remainders that is left unmerged until the last step. 
 
-Using the experimental method described in section 1.1, I generated timing data for  \verb+mergesort()+ and \verb+mergesort\_bottom()+ with list lengths ranging from 10 to 1 000 000. I used the provided function \verb+create\_random\_list()+ to generate each trial list. These results are shown in the graph below. 
+Using the experimental method described in section 1.1, I generated timing data for  \verb+mergesort()+ and \verb+mergesort_bottom()+ with list lengths ranging from 10 to 1 000 000. I used the provided function \verb+create_random_list()+ to generate each trial list. These results are shown in the graph below. 
 
 \begin{figure}[H]
 \centering
@@ -58,11 +51,11 @@ Using the experimental method described in section 1.1, I generated timing data 
 \caption{performance of top-down compared to bottom-up implementation}
 \label{Figure: i1}
 \end{figure}
-\noindent The two implementations are similar in performance in that they both seem to follow a linear trendline. However, the bottom-up implementation is slower than top-down. Right now, we have a linear trendline for both implementations, but we can check if the performances of these functions are in $\Theta(n)$ or $\Theta(n\log{n})$ by graphing $T(n)/n$.
+\noindent The two implementations are similar in performance in that they both seem to follow a linear trendline. However, the bottom-up implementation is slower than top-down (??). Right now, we have a linear trendline for both implementations, but we can check if the performances of these functions are in $\Theta(n)$ or $\Theta(n\log{n})$ by graphing $T(n)/n$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{multi_pivot}
+\includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{tn_n}
 \caption{performance of all five implementations}
 \label{Figure: m1}
 \end{figure}
