@@ -25,11 +25,12 @@ class Heap:
 
     def build_heap3(self):
         while not self.is_heap():
-            for i in range(self.length//2):
+            for i in range(self.length//2-1):
                 self.sink(i)
+            print(self)
 
     def is_heap(self):
-        for i in range(self.length//2):
+        for i in range(self.length//2-1):
             if not (self.data[i]>=self.data[self.left(i)] and self.data[i]>=self.data[self.right(i)]):
                 return False
         return True
@@ -89,6 +90,6 @@ class Heap:
             whitespace = whitespace // 2
         return s
 
-array = [1,2,3,4,5,6,7,8,9]
+array = [1,2,3,4,5,6,7,8,9,10]
 a = Heap(array)
-print(a)
+#print(a)
