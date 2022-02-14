@@ -7,19 +7,32 @@ class Heap:
     def __init__(self, L):
         self.data = L
         self.length = len(L)
-        self.build_heap1()
+        #self.build_heap1()
+        #self.build_heap2()
+        self.build_heap3()
 
     def build_heap1(self):
         for i in range(self.length // 2 - 1, -1, -1):
             self.sink(i)
 
     def build_heap2(self):
-        return
-        #todo
+        temp = self.data
+        length = self.length
+        self.data = []
+        self.length = 0
+        for i in range(length):
+            self.insert(temp[i])
 
     def build_heap3(self):
-        return
-        #todo
+        while not self.is_heap():
+            for i in range(self.length//2):
+                self.sink(i)
+
+    def is_heap(self):
+        for i in range(self.length//2):
+            if not (self.data[i]>=self.data[self.left(i)] and self.data[i]>=self.data[self.right(i)]):
+                return False
+        return True
 
     def sink(self, i):
         largest_known = i
@@ -76,3 +89,6 @@ class Heap:
             whitespace = whitespace // 2
         return s
 
+array = [1,2,3,4,5,6,7,8,9]
+a = Heap(array)
+print(a)
