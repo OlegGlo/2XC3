@@ -27,7 +27,7 @@ class Heap:
         while not self.is_heap():
             for i in range(self.length//2-1):
                 self.sink(i)
-            print(self)
+            # print(self)
 
     def is_heap(self):
         for i in range(self.length//2-1):
