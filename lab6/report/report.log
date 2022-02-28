@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.2.20)  28 FEB 2022 14:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.2.20)  28 FEB 2022 14:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -260,27 +260,48 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 39.
 
+Overfull \hbox (12.1392pt too wide) in paragraph at lines 41--42
+\OT1/cmr/m/n/12 Knowing that sink has $\OML/cmm/m/it/12 O\OT1/cmr/m/n/12 ([] \OML/cmm/m/it/12 n\OT1/cmr/m/n/12 )$ com-pex-ity, I would ex-pect [][]\OT1/cmtt/m/n/12 build_heap1() []\OT1/cmr/m/n/12 to have $\OML/cmm/m/it/12 O\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n [] n\OT1/cmr/m/n/12 )$
+ []
+
+<./images//heap.png, id=40, 836.58pt x 400.77pt>
+File: ./images//heap.png Graphic file (type png)
+<use ./images//heap.png>
+Package pdftex.def Info: ./images//heap.png  used on input line 52.
+(pdftex.def)             Requested size: 409.72354pt x 196.28117pt.
+[2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 58.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 40.
+(hyperref)                removing `math shift' on input line 58.
 
-[2] (./report.aux)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 58.
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.62 \end{document}
+                    <./images//heap.png>] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 51943B4594091FB235A4C94362720F03;184.
+(rerunfilecheck)             Checksum: 952FBE31E2488EC7D1D0E4F342E47A33;747.
  ) 
 Here is how much of TeX's memory you used:
- 9889 strings out of 478278
- 155448 string characters out of 5846547
- 446489 words of memory out of 5000000
- 27997 multiletter control sequences out of 15000+600000
- 474289 words of font info for 45 fonts, out of 8000000 for 9000
+ 9923 strings out of 478278
+ 155953 string characters out of 5846547
+ 450542 words of memory out of 5000000
+ 28021 multiletter control sequences out of 15000+600000
+ 475073 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,288b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (2 pages, 62107 bytes).
+ 60i,7n,63p,665b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (3 pages, 232430 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 62 words of extra memory for PDF output out of 10000 (max. 10000000)
 
