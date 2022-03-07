@@ -7,8 +7,8 @@ class RBNode:
         self.parent = None
         self.colour = "R"
 
-    def get_uncle(self):
-        return
+    # def get_uncle(self):
+    #     return
 
     def is_leaf(self):
         return self.left == None and self.right == None
@@ -124,3 +124,18 @@ class RBTree:
         if node.right == None:
             return "[" +  self.__str_helper(node.left) + " <- " + str(node) + "]"
         return "[" + self.__str_helper(node.left) + " <- " + str(node) + " -> " + self.__str_helper(node.right) + "]"
+
+
+tree = RBTree()
+# node1 = RBNode(6)
+# node2 = RBNode(4)
+# node3 = RBNode(9)
+tree.insert(6)
+tree.insert(4)
+tree.insert(8)
+print(tree)
+# node1 = RBNode(8)
+
+print(tree)
+
+
