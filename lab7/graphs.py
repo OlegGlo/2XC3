@@ -98,7 +98,7 @@ def create_random_graph(n, c):
     edges = []
     edge = (0,0)
     while c > 0:
-        while edge[0] == edge[1] or edge in edges:
+        while edge[0] == edge[1] or edge in edges or reversed(edge) in edges:
             edge = (random.randint(0,n-1), random.randint(0,n-1))
         edges.append(edge)
         g.add_edge(edge[0],edge[1])
@@ -111,7 +111,7 @@ def print_graph(G):
         print(node)
         print(G.adj[node])
 
-g = create_random_graph(3,3)
+g = create_random_graph(6,6)
 print_graph(g)
 print("\n\n")
 print(is_connected(g))
