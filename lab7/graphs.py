@@ -83,12 +83,11 @@ def has_cycle(G):
         n = 1
     else: n = G.number_of_nodes()
     for i in range(n):
-        node1 = i
-        P = [(node1,-1)]
+        P = [(i,-1)]
         marked = {}
         for node in G.adj:
             marked[node] = False
-        marked[node1] = True
+        marked[i] = True
         while len(P) != 0:
             current = P[0][0]
             parent = P[0][1]
