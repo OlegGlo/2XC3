@@ -98,11 +98,9 @@ def has_cycle(G):
 
 
 def is_connected(G):
-    for node1 in G.adj:
-        for node2 in G.adj:
-            if node1 != node2 and not BFS(G, node1, node2):
-                return False
-    return True
+    if len(DFS3(G,0)) == len(G.adj)-1:
+        return True
+    else: return False
 
 def create_random_graph(n, c):
     g = Graph(n)
@@ -132,5 +130,14 @@ y.add_edge(0,1)
 y.add_edge(0,2)
 y.add_edge(1,2)
 
+x = Graph(5)
+x.add_edge(0,3)
+x.add_edge(0,1)
+x.add_edge(2,3)
+
 print(has_cycle(z))
+print(is_connected(z))
 print(has_cycle(y))
+print(is_connected(y))
+print(has_cycle(x))
+print(is_connected(x))
