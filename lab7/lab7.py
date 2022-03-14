@@ -6,7 +6,7 @@ class Graph:
     def __init__(self, n):
         self.adj = {}
         for i in range(n):
-            self.adj[i] = []
+            self.adj[i] = [] 
 
     def are_connected(self, node1, node2):
         return node2 in self.adj[node1]
@@ -25,6 +25,7 @@ class Graph:
     def number_of_nodes(self):
         return len(self.adj)
 
+n = Graph(5)
 
 #Breadth First Search
 def BFS(G, node1, node2):
