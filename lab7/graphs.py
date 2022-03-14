@@ -81,7 +81,8 @@ def DFS3(G, node1):
 def has_cycle(G):
     if is_connected(G):
         n = 1
-    else: n = G.number_of_nodes()
+    else: 
+        n = G.number_of_nodes()
     for i in range(n):
         P = [(i,-1)]
         marked = {}
@@ -98,7 +99,7 @@ def has_cycle(G):
                     P.append((node,current))
                 elif node != parent:
                     return True
-        return False
+    return False
 
 def is_connected(G):
     for node1 in G.adj:
@@ -111,7 +112,7 @@ def create_random_graph(n, c):
     g = Graph(n)
     edges = []
     edge = (0,0)
-    if c > n: c = n
+    if c > n*(n-1)/2: c = n*(n-1)/2
     while c > 0:
         while edge[0] == edge[1] or edge in edges or edge[::-1] in edges:
             edge = (random.randint(0,n-1), random.randint(0,n-1))
@@ -125,7 +126,7 @@ def print_graph(G):
         print(node)
         print(G.adj[node])
 
-g = create_random_graph(6,4)
+g = create_random_graph(6,6)
 print_graph(g)
 print("\n\n")
 print(is_connected(g))
