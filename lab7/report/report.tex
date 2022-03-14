@@ -59,6 +59,8 @@ As stated earlier, a graph requires at least $k-1$ edges to be connected. The ma
 \label{Figure: m2}
 \end{figure}
 As shown in the graph above, the probability of connectedness in a randomly-generated graph is at approximately 50\% when $c=244$. This is expected because 244 is between 99 and 4950. 
+\subsection{Comparing c Values}
+As detailed in the "is connected" section, the high "c" value is explained by the high minimum edge requirement and the low probability that all the edges will be connected. In other words, the "has cycle" has a lower requirement to return true than the "is connected" function. Therefore it makes sense the "is connected" requires a higher value for c for the graphs to be connected half the time compared to having a cycle half the time.
 
 \end{document}
 

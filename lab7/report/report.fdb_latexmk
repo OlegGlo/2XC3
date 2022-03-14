@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1647215074 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab7/report/report.tex" "report.pdf" "report" 1647215076
-  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab7/report/report.tex" 1647215073 3673 4114a7ff485ff94e3cd87dd25a787e50 ""
+["pdflatex"] 1647233215 "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab7/report/report.tex" "report.pdf" "report" 1647233216
+  "/Users/olegglotov/Documents/MAC/Python/2XC3 - Pratice and Exp/lab7/report/report.tex" 1647233214 5063 5cfcf6c84285b586bbf965df1844deee ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -19,6 +19,9 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1248133631 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
   "/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -70,10 +73,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647043450 4410336 9a0a29906eb859c2474e81197df54e3a ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1646426868 2797805 4b61f02b1caea265c3a5fbb69099d9eb ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "images//heap.png" 1647214212 178602 58cc993f7c0f8593f67288fd23252ab4 ""
-  "report.aux" 1647215076 1718 c9e9b5d65c631945a17066d6a214d26c "pdflatex"
-  "report.out" 1647215076 747 952fbe31e2488ec7d1d0e4f342e47a33 "pdflatex"
-  "report.tex" 1647215073 3673 4114a7ff485ff94e3cd87dd25a787e50 ""
+  "images//connected.png" 1647232279 99025 3f47695796e27c3f8f033ea1fb57d6db ""
+  "images//cycle.png" 1647232279 63663 b0486fd0de3dfc1f2fe292e1ce9d36bc ""
+  "report.aux" 1647233216 1796 992066a38acaf7504d0087d093e6be9a "pdflatex"
+  "report.out" 1647233216 810 dc259c5e943617c2a8022eaa74093285 "pdflatex"
+  "report.tex" 1647233214 5063 5cfcf6c84285b586bbf965df1844deee ""
   (generated)
   "report.aux"
   "report.log"
