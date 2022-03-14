@@ -79,12 +79,27 @@ def DFS3(G, node1):
     return parent
 
 def has_cycle(G):
-    for node1 in G.adj:
-        for node2 in G.adj:
-            if node1 != node2 and BFS(G, node1, node2):
-                if BFS2(G, node1, node2) != DFS2(G, node1, node2):
+    if is_connected(G):
+        n = 1
+    else: n = G.number_of_nodes()
+    for i in range(n):
+        node1 = i
+        P = [(node1,-1)]
+        marked = {}
+        for node in G.adj:
+            marked[node] = False
+        marked[node1] = True
+        while len(P) != 0:
+            current = P[0][0]
+            parent = P[0][1]
+            P.pop()
+            for node in G.adj[current]:
+                if not marked[node]:
+                    marked[node] = True
+                    P.append((node,current))
+                elif node != parent:
                     return True
-    return False
+        return False
 
 def is_connected(G):
     for node1 in G.adj:
@@ -97,13 +112,13 @@ def create_random_graph(n, c):
     g = Graph(n)
     edges = []
     edge = (0,0)
+    if c > n: c = n
     while c > 0:
-        while edge[0] == edge[1] or edge in edges or reversed(edge) in edges:
+        while edge[0] == edge[1] or edge in edges or edge[::-1] in edges:
             edge = (random.randint(0,n-1), random.randint(0,n-1))
         edges.append(edge)
         g.add_edge(edge[0],edge[1])
         c -= 1
-    print(edges)
     return g
 
 def print_graph(G):
@@ -111,7 +126,7 @@ def print_graph(G):
         print(node)
         print(G.adj[node])
 
-g = create_random_graph(6,6)
+g = create_random_graph(6,4)
 print_graph(g)
 print("\n\n")
 print(is_connected(g))
