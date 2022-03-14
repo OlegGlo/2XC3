@@ -121,7 +121,6 @@ def print_graph(G):
         print(node)
         print(G.adj[node])
 
-<<<<<<< HEAD
 z = Graph(4)
 z.add_edge(0,3)
 z.add_edge(0,1)
@@ -143,17 +142,3 @@ print(has_cycle(y))
 print(is_connected(y))
 print(has_cycle(x))
 print(is_connected(x))
-=======
-g = create_random_graph(6,6)
-print_graph(g)
-print("\n\n")
-print(is_connected(g))
-print(has_cycle(g))
-
-# z = Graph(4)
-# z.add_edge(0,3)
-# z.add_edge(0,1)
-# z.add_edge(2,3)
-# print_graph(z)
-# print(has_cycle(z))
->>>>>>> 28e55698b33d9359a32dd818f3d92f0a9a3a2d0a
