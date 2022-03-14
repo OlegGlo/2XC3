@@ -108,11 +108,12 @@ def is_connected(G):
                 return False
     return True
 
-def create_random_graph(n, c):
+def create_random_graph(n, c): #nodes, edges
     g = Graph(n)
     edges = []
     edge = (0,0)
-    if c > n*(n-1)/2: c = n*(n-1)/2
+    if c > n*(n-1)/2: 
+        c = n*(n-1)/2
     while c > 0:
         while edge[0] == edge[1] or edge in edges or edge[::-1] in edges:
             edge = (random.randint(0,n-1), random.randint(0,n-1))
@@ -131,3 +132,10 @@ print_graph(g)
 print("\n\n")
 print(is_connected(g))
 print(has_cycle(g))
+
+# z = Graph(4)
+# z.add_edge(0,3)
+# z.add_edge(0,1)
+# z.add_edge(2,3)
+# print_graph(z)
+# print(has_cycle(z))
