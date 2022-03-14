@@ -79,27 +79,23 @@ def DFS3(G, node1):
     return parent
 
 def has_cycle(G):
-    if is_connected(G):
-        n = 1
-    else: 
-        n = G.number_of_nodes()
-    for i in range(n):
-        P = [(i,-1)]
+    for i in G.adj:
+        S = [i]
+        parent = {}
         marked = {}
         for node in G.adj:
             marked[node] = False
-        marked[i] = True
-        while len(P) != 0:
-            current = P[0][0]
-            parent = P[0][1]
-            P.pop()
-            for node in G.adj[current]:
+        while len(S) != 0:
+            current_node = S.pop()
+            marked[current_node] = True
+            for node in G.adj[current_node]:
                 if not marked[node]:
-                    marked[node] = True
-                    P.append((node,current))
-                elif node != parent:
+                    parent[node] = current_node
+                    S.append(node)
+                elif parent[current_node] != node:
                     return True
     return False
+
 
 def is_connected(G):
     for node1 in G.adj:
@@ -126,8 +122,15 @@ def print_graph(G):
         print(node)
         print(G.adj[node])
 
-g = create_random_graph(6,6)
-print_graph(g)
-print("\n\n")
-print(is_connected(g))
-print(has_cycle(g))
+z = Graph(4)
+z.add_edge(0,3)
+z.add_edge(0,1)
+z.add_edge(2,3)
+
+y = Graph(3)
+y.add_edge(0,1)
+y.add_edge(0,2)
+y.add_edge(1,2)
+
+print(has_cycle(z))
+print(has_cycle(y))

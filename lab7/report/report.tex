@@ -18,11 +18,8 @@
 
 \newcounter{stepnum}
 
-<<<<<<< HEAD
-\title{CS/SE 2XC3 Lab 6 Report}
-=======
 \title{CS/SE 2XC3 Lab 7 Report}
->>>>>>> bfbc19c04c54c59fb86e3fc3e98737ae12868961
+
 \author{
   Glotov, Oleg\\ L03, 400174037\\
   \texttt{glotovo@mcmaster.ca}
@@ -39,17 +36,13 @@
 This report includes the main observations that we found in this week's lab, along with the analysis of our results.
 
 \newpage 
-\section{Building Heaps}
-In this section, we discuss the three implementations of heap build and their time complexities. We assume that $n$ represents the size of the input array given to each build function.
-\subsection{Bottom-up}
-Knowing that sink has $O(\log{n})$ compexity, I would expect \verb+build_heap1()+ to have $O(n\log{n})$ complexity. This is because the function consists of a single loop that calls sink $n/2$ times. 
-\subsection{Insert}
-Knowing that insert has $O(\log{n})$ compexity, I would also expect \verb+build_heap2()+ to have $O(n\log{n})$ complexity. The function copies the contents of the heap into a temporary array, empties the heap, and then iteratively calls insert on each element of the heap. Since insert is called $n$ times, total complexity is $O(n\log{n})$.
-\subsection{Top-down}
-Knowing that sink has $O(\log{n})$ complexity, I would expect \verb+build_heap3()+ to run in $O(n\log{n})$. This is because the function calls the helper \verb+is_heap+ iteratively to check if the heap is a max heap yet. \verb+is_heap+ runs in $O(n)$ because it loops through the nonleaf nodes and checks if each node's children are both smaller than or equal to it. If not, the function calls sink on each nonleaf node in the heap. This takes $O(n\log{n})$ time, a combination of the complexity of sink and the size of $n$. 
-\subsection{Experimental Method}
-The method used to measure the performance of each build function was the same as the method used for lab 4. The “timeit” library was used to measure the runtime which was then exported into a csv file and subsequently analyzed in excel. The sample size for each build implementation were multiples of 10, increasing to a list size of a 1 000 000. For each sample size, an implementation was tested 5 times and the results averaged. For each trial, a new random list was generated. For experiment-related code, see the \verb+code.py+ for lab 4.
-\subsection{Observations}
+\section{Basic Graph Algorithms}
+In this section, we discuss basic graph operations and their implementations. 
+\subsection{Generating Random Graphs}
+We defined a function \verb+create_random_graph(n,c)+ to randomly construct a graph when given some number of nodes $n$ and number of edges $c$. The argument $c$ is given the upper bound $\frac{n\times(n-1)}{2}$ because there can be at most $\frac{n\times(n-1)}{2}$ unique edges in a graph with $n$ nodes. The algorithm initializes a graph with $n$ nodes and then generates a candidate edge between two randomly selected nodes. The candidate edge is accepted only if it is between two unique nodes (does not accept self-loops) and only if it (or its reverse) does not already exist in the graph. If a candidate edge is invalid, it is discarded and the algorithm randomly generates another one. The algorithm adds $c$ valid edges to the graph and returns the populated graph.
+\subsection{Cycles Probability}
+Our \verb+has_cycle(G)+ function checks if a given graph $G$ contains one or more cycles using a variation on our DFS3 algorithm. If the input graph is connected, the algorithm starts at node $0$ because all nodes are accessible from any other node. If it is not connected, the algorithm checks for a cycle beginning at each node in the graph. The algorithm traverses the graph depth-first, marking visited nodes. When visiting a node, the current node and its parent are popped from the stack and the algorithm moves on to each node adjacent to the current node. If an adjacent node is unvisited, it is marked and the current and adjacent node are pushed onto the stack. If an adjacent node has been visited but is not the current node's parent, then there is a cycle and the algorithm returns true.
+\subsection{Connected Probability}
 The complexities of the various implementations can be seen in the graph below.
 \begin{figure}[H]
 \centering
@@ -57,11 +50,6 @@ The complexities of the various implementations can be seen in the graph below.
 \caption{performance of three implementations}
 \label{Figure: m1}
 \end{figure}
-
-
-\section{$k$-Heap}
-An advantage of using a $k$-heap is that tree height is minimized. A balanced $k$-heap with $n$ elements has an insert complexity of $O(\log_k{n})$. A disadvantage of having a higher $k$ value is that it requires more compares per non-leaf node, making the overall time complexity of sinking a node, $O(k\log_k{n})$, which gets very large as $k$ increases.
-I would expect our sink to have $O(k\log_k{n})$ performance because it is very similar to the sink function for binary heap except instead of doing two compares per non-leaf node, it does $k$ compares. Since 2 is a relatively small number, it can be ignored in the performance of building a binary heap. However, as $k$ gets big, I would expect this value to significantly impact performance.
 
 \end{document}
 
