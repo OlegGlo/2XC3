@@ -1,11 +1,7 @@
 #Undirected graph using an adjacency list
 class WeightedGraph:
 
-    size = 0
-
     def __init__(self, n):
-
-        self.size = n #Small addition
 
         self.adj = {}
         for i in range(n):
@@ -38,6 +34,7 @@ class WeightedGraph:
 
     def show(self):
         for i in range(len(self.adj)):
+            print("node:", i)
             print(self.adj[i])
 
 
