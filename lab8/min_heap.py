@@ -113,11 +113,15 @@ class Element:
 
 L = []
 L.append(Element("A",6))
+L.append(Element("A",8))
+L.append(Element("A",10))
 L.append(Element("B",1))
 L.append(Element("C",2))
 L.append(Element("D",8))
 L.append(Element("E",0))
 
 heap = MinHeap(L)
+
+print(heap)
 
 
