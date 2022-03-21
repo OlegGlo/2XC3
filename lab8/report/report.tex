@@ -47,7 +47,9 @@ The most expensive functions in the implementation of Prim's algorithm are findi
 \caption{time complexity of prim v1 vs. prim v2}
 \label{Figure: m1}
 \end{figure}
-\noindent As shown in the graph above, ... 
+\noindent The graph above shows that the second implementation outperforms the first after graph sizes of around 100. Sorting vast arrays becomes significantly slower at larger array sizes than rearranging a Min heap which was explained earlier. This effect is clearly seen in the graph. 
+
+The testing method used was consistent with earlier labs. A function to generate a random graph given a number of edges and vertices was used. Given the graphs' randomness, the assumption that input graphs are connected had to be relaxed to avoid re-computing. For each graph size, the algorithm was timed three times, ranging from a size of 5 to 5000 vertices.
 
 \end{document}
 
