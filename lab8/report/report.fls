@@ -488,11 +488,11 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-INPUT ./images//prim1.png
-INPUT ./images//prim1.png
-INPUT ./images//prim1.png
-INPUT ./images//prim1.png
-INPUT ./images//prim1.png
+INPUT ./images//prim1and2.png
+INPUT ./images//prim1and2.png
+INPUT ./images//prim1and2.png
+INPUT ./images//prim1and2.png
+INPUT ./images//prim1and2.png
 INPUT report.aux
 INPUT ./report.out
 INPUT ./report.out
