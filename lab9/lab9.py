@@ -93,7 +93,9 @@ def create_random_complete_graph(n,upper):
                 G.add_edge(i,j,random.randint(1,upper))
     return G
 
-
+def print_matrix(d):
+    for row in d:
+        print(row)
 #Assumes G represents its node as integers 0,1,...,(n-1)
 def mystery(G):
     n = G.number_of_nodes()
@@ -101,11 +103,11 @@ def mystery(G):
     for k in range(n):
         for i in range(n):
             for j in range(n):
-                if d[i][j] > d[i][k] + d[k][j]: 
-                    d[i][j] = d[i][k] + d[k][j]
+                if d[i][j] > d[i][k] + d[k][j]: #checks if recorded path from i to j is greater than the sum of recorded paths from i to k and k to j
+                    d[i][j] = d[i][k] + d[k][j] #for example, if i and j aren't connected, d[i][j] = 999999 initially, but if some third node connects them, d[i][k] < 999999 and d[k][j] < 999999
     return d
 
-def init_d(G):
+def init_d(G): #inserts adjacent edges into shortest path matrix bc a path can't be < 1 edge in length
     n = G.number_of_nodes()
     d = [[999999 for j in range(n)] for i in range(n)]
     for i in range(n):
@@ -113,4 +115,8 @@ def init_d(G):
             if G.are_connected(i,j):
                 d[i][j] = G.w(i,j)
         d[i][i] = 0
+    print_matrix(d)
     return d
+
+gr1 = create_random_complete_graph(8,10)
+print_matrix(mystery(gr1))
