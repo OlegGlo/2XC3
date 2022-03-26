@@ -69,12 +69,7 @@ The \verb+mystery()+ function in \verb+lab9.py+ uses a helper function \verb+ini
 \caption{performance of mystery function vs. V}
 \label{Figure: m3}
 \end{figure}
-In lab9.py you will find a mystery() function. It takes a graph as input. Do some reverse
-engineering. Try to figure out what exactly this function is accomplishing. You should explore
-the possibility of testing it on graphs with negative edge weights (create some small graphs
-manually for this). Determine the complexity of this function by running some experiments as
-well as inspecting the code. Given what this code does, is the complexity surprising? Why or
-why not
+\noindent It is clear from the structure of the code that \verb+mystery()+ has time complexity $O(V^3)$, similar to \verb+all_pairs_dijkstra()+. That is why its performance in our experiments is surprising. \verb+mystery()+ runs much faster than \verb+all_pairs_dijkstra()+ despite its simple implementation and data structures. From the graph, we can see that \verb+mystery()+ exhibits similar asymptotic behaviours to \verb+all_pairs_dijkstra()+. However, it is consistently faster. This implies that \verb+all_pairs_dijkstra()+ may have more overhead. This makes sense because Dijkstra makes use of dictionaries and a min heap, while the mystery algorithm only maintains a single, 2-dimensional list.
 
 
 \end{document}
