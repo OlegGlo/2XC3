@@ -43,6 +43,8 @@ G.add_edge(7,6)
 
 
 
+
+
 # Depth First Search
 
 def DFS(G, root):
@@ -81,8 +83,6 @@ def topo_visit(G, node, colours, sched):
             topo_visit(G, neighbour, colours, sched)
     colours[node] = "crimson"
     sched.append(node)
-
-
 
 def get_transpose(G):
     GT = DirectedGraph()
@@ -148,33 +148,45 @@ def SCC_DFS_visit(G, node, colours, stack):
     colours[node] = "black"
     stack.append(node)
 
+# DFS(G,0)
+# print (topo_sort(G))
 
-G = DirectedGraph()
+# stck = []
+# SCC_DFS(G,stck)
+# print(stck)
+# print("asd")
+print(SCC(G))
 
-G.add_node("prep lecture")
-G.add_node("relearn material")
-G.add_node("wake up")
-G.add_node("coffee")
-G.add_node("shower")
-G.add_node("get dressed")
-G.add_node("teach")
-G.add_node("brush beard")
-G.add_node("feed dog")
-G.add_node("sleep")
 
-G.add_edge("sleep", "wake up")
-G.add_edge("wake up", "shower")
-G.add_edge("wake up", "coffee")
-G.add_edge("coffee", "teach")
-G.add_edge("shower", "get dressed")
-G.add_edge("shower", "brush beard")
-G.add_edge("brush beard", "teach")
-G.add_edge("get dressed", "teach")
-G.add_edge("wake up", "shower")
-G.add_edge("relearn material", "prep lecture")
-G.add_edge("prep lecture", "teach")
-G.add_edge("wake up", "feed dog")
-G.add_edge("teach", "sleep")
+
+# G = DirectedGraph()
+
+# G.add_node("prep lecture")
+# G.add_node("relearn material")
+# G.add_node("wake up")
+# G.add_node("coffee")
+# G.add_node("shower")
+# G.add_node("get dressed")
+# G.add_node("teach")
+# G.add_node("brush beard")
+# G.add_node("feed dog")
+# G.add_node("sleep")
+
+# G.add_edge("sleep", "wake up")
+# G.add_edge("wake up", "shower")
+# G.add_edge("wake up", "coffee")
+# G.add_edge("coffee", "teach")
+# G.add_edge("shower", "get dressed")
+# G.add_edge("shower", "brush beard")
+# G.add_edge("brush beard", "teach")
+# G.add_edge("get dressed", "teach")
+# G.add_edge("wake up", "shower")
+# G.add_edge("relearn material", "prep lecture")
+# G.add_edge("prep lecture", "teach")
+# G.add_edge("wake up", "feed dog")
+# G.add_edge("teach", "sleep")
+
+
 
 
 
