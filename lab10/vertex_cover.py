@@ -1,4 +1,6 @@
 import random
+from lab10.lab10 import *
+from code import *
 
 def edgeListForGraph(g):
     edges = []
@@ -14,6 +16,15 @@ def edgeListForGraph(g):
             if (a == check[1] and b == check[0]):
                 edges.remove((check[0],check[1]))
     return edges
+
+def nodeListForGraph(g):
+    adj = list()
+    for i in range(g.number_of_nodes()):
+        adj.append((i,g.adjacent_nodes(i)))
+
+    adj.sort(key=lambda x: len(x[1]), reverse=True)
+
+    return adj
 
 def vc_approx1(g): #add type
 
@@ -57,13 +68,15 @@ def vc_approx1(g): #add type
     vCover = list(Cov)
     return vCover
 
-def vc_approx2(): #add type
-    return
+def vc_approx2(g): #O(V*E+2E+V)
+    nodes = nodeListForGraph(g)
+    return [node for (node,adj) in nodes if len(adj) > 1]
 
-def driver():
-
-    vc_approx1()
-
-    vc_approx2()
-    
-    return
+def vc_approx3(g): #O(V^2+V*E+VlogV+2E+V) i think
+    nodes = nodeListForGraph(g)
+    cover = [nodes[0][0]]
+    i = 1
+    while (not is_vertex_cover(g,cover)):
+        cover.append(nodes[i][0])
+        i += 1
+    return cover
